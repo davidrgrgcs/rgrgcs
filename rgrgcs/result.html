@@ -14,7 +14,7 @@
         body {
             padding: 40px 20px;
             text-align: center;
-            background: #FCF5E8;/* 和首页统一浅米色 */
+            background: #FCF5E8;
         }
         .result-box {
             max-width: 420px;
@@ -82,10 +82,8 @@ window.onload=function(){
     const imgDom=document.getElementById('resImg');
     imgDom.src=personData.avatar;
 
-    // 保存图片核心逻辑
     const saveBtn=document.getElementById('saveImgBtn');
     saveBtn.onclick=function(){
-        // 创建a标签实现下载，移动端唤起相册保存
         let a = document.createElement('a');
         a.href = imgDom.src;
         a.download = finalName+'人格结果图';
