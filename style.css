@@ -1,4 +1,3 @@
-/* 简约渐变橙色系 UI */
 * {
     margin: 0;
     padding: 0;
@@ -108,7 +107,6 @@ button:active {
     min-height: 100px;
 }
 
-/* 答题选项按钮 长文本完美自适应 */
 .option-box button {
     background-color: rgba(255,255,255,0.8);
     color: #1a1a1a;
@@ -132,22 +130,19 @@ button:active {
     background-color: rgba(242,121,53,0.08);
 }
 
-/* ========== 结果页样式 ========== */
 .result-container {
     text-align: center;
 }
 
-/* 隐藏原来的圆形头像 */
 .avatar-box {
     display: none !important;
 }
 
-/* 新增：竖屏结果海报大图容器 */
 .result-poster-box {
     width: 100%;
     max-width: 360px;
-    aspect-ratio: 9 / 16; /* 强制9:16竖屏 */
-    background-color: #f5f5f5; /* 背景色，可替换 */
+    aspect-ratio: 9 / 16; 
+    background-color: #f5f5f5;
     border-radius: 20px;
     overflow: hidden;
     margin: 20px auto;
@@ -155,7 +150,6 @@ button:active {
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* 海报图样式 */
 .result-poster-box img {
     width: 100%;
     height: 100%;
@@ -163,7 +157,6 @@ button:active {
     display: block;
 }
 
-/* 人格描述文字 (保持不变) */
 .res-desc-short {
     font-size: 18px;
     color: #1a1a1a;
@@ -181,7 +174,6 @@ button:active {
     text-align: left;
 }
 
-/* 重新测试按钮 */
 #restartBtn {
     margin-top: 10px;
 }
