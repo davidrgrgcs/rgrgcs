@@ -186,6 +186,7 @@ button:active {
     margin-top: 10px;
 }
 
+/* 适配刘海屏/安全区域 */
 @supports (padding-top: env(safe-area-inset-top)) {
     body {
         padding-top: calc(24px + env(safe-area-inset-top));
