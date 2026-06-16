@@ -9,5 +9,3 @@ for = "/*"
 [headers.values]
 Content-Encoding = "gzip"
 Cache-Control = "public, max-age=31536000"
-[[plugins]]
-package = "@netlify/plugin-html-minifier"
