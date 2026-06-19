@@ -1,6 +1,7 @@
 let currentQ = 0;
 let pickFivePerson = [];
 let numMapPerson = [];
+let selectRecord = {};
 
 let questionList = [
     "老师无故叫你上课起立，你会？",
@@ -95,6 +96,7 @@ window.onload = function(){
 function initPage(){
     currentQ = 0;
     pickFivePerson = [];
+    selectRecord = {};
     renderQues();
 }
 
@@ -107,11 +109,34 @@ function renderQues(){
     let optBox = document.getElementById("optionBox");
     optBox.innerHTML = "";
     let nowOpts = optionList[currentQ];
+    let selectedIndex = selectRecord[currentQ] ?? -1;
 
-    nowOpts.forEach(item=>{
+    nowOpts.forEach((item, index)=>{
         let btn = document.createElement("button");
         btn.innerText = item.text;
+        btn.style.width = "90%";
+        btn.style.padding = "18px 12px";
+        btn.style.margin = "10px auto";
+        btn.style.borderRadius = "12px";
+        btn.style.border = "1px solid #eee";
+        btn.style.background = "#fff";
+        btn.style.fontSize = "17px";
+        btn.style.display = "block";
+        btn.style.cursor = "pointer";
+        if(index === selectedIndex){
+            btn.style.background = "#ffeeda";
+            btn.style.border = "1px solid #f8c89c";
+        }
+
         btn.onclick = function(){
+            selectRecord[currentQ] = index;
+            document.querySelectorAll("#optionBox button").forEach(b=>{
+                b.style.background = "#fff";
+                b.style.border = "1px solid #eee";
+            })
+            btn.style.background = "#ffeeda";
+            btn.style.border = "1px solid #f8c89c";
+
             if(currentQ < 5){
                 pickFivePerson.push(item.person);
                 currentQ++;
